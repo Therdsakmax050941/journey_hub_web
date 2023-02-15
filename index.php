@@ -11,86 +11,61 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <script src="/JS/screen_small.js"></script>
-  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Athiti">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Journey บ้านพักพูลวิลล่า</title>
 </head>
+
 <header>
-  <div class="w3-top">
-    <div class="w3-bar  w3-card  w3-large header_bg">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large"
-        href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large" style="margin-left: 500px;;"><img src="/img/logo2.png"
-          width="100px" height="80px"></a>
-
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-        style="margin-left: 50px; margin-top: 20px;">หน้าแรก</a>
-
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="margin-top: 20px;"
-        onclick="toggleAccommodationMenu()">ที่พัก <i class="fa fa-caret-down"></i></a>
-
-      <div id="accommodationMenu" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-        <a href="#" class="w3-bar-item w3-button w3-hover-white">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white">Link 3</a>
-      </div>
-
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="margin-top: 20px;"
-        onclick="toggleGuideMenu()">เจอนี่ไกด์ รีวิว <i class="fa fa-caret-down"></i></a>
-
-      <div id="guideMenu" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-        <a href="#" class="w3-bar-item w3-button w3-hover-white">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white">Link 3</a>
-      </div>
-
-
-
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="margin-top: 20px;">
-        <img src="/img/facebook.svg" width="30px">เจอนี่ฮับ ที่พักเขาใหญ่</a>
-
-
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-        style="margin-top: 20px;"><img src="/img/line.svg" width="30px">ID Line : @800rlthr</a>
-
-
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-        style="margin-top: 20px;"><img src="https://img.icons8.com/neon/30/null/ringer-volume.png" />โทร :
+<nav class="navbar navbar-expand-lg navbar-light header_bg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="margin-left: 500px;"><img src="/img/logo2.png"
+          width="120px" height="80px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">หน้าแรก</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ที่พัก
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">link1</a></li>
+            <li><a class="dropdown-item" href="#">link2</a></li>
+            <li><a class="dropdown-item" href="#">link3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          เจอนี่ไกด์ รีวิว
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">link3</a></li>
+            <li><a class="dropdown-item" href="#">link2</a></li>
+            <li><a class="dropdown-item" href="#">link1</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page" href="#"><img src="/img/facebook.svg" width="20px">&nbsp;เจอนี่ฮับ ที่พักเขาใหญ่</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page"href="#"><img src="/img/line.svg" width="30px">&nbsp;ID Line : @800rlthr</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page" href="#" ><img src="https://img.icons8.com/neon/30/null/ringer-volume.png" />&nbsp;โทร :
         0946989991</a>
-
-    </div>
-
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="header"></div>
+</nav>
 </header>
-<script>
-  function toggleAccommodationMenu() {
-  var x = document.getElementById("accommodationMenu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-function toggleGuideMenu() {
-  var x = document.getElementById("guideMenu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-</script>
-
 
 <body>
   <div class="w3-container header_body" style="margin-top: 90px; text-align: center "></div>
@@ -103,7 +78,6 @@ function toggleGuideMenu() {
   <div class="w3-row-padding" style="margin-top: 90px;">
     <?php foreach ($villas as $villa): ?>
       <div class="w3-col l3 m6 w3-margin-bottom">
-        <a href="<?= $villa['url'] ?>">
           <div class="w3-card">
             <?php if (!empty($villa["img"])): ?>
               <img src='<?= $villa["img"] ?>' style="width:100%">
@@ -115,10 +89,10 @@ function toggleGuideMenu() {
               <p>
                 <?= $villa["content"] ?>
               </p>
+              <a href="<?= $villa['url'] ?>" class="btn btn-primary font">รายละเอียด</a>
+              <p>   </p>
             </div>
           </div>
-        </a>
-
       </div>
     <?php endforeach; ?>
   </div>
