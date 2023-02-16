@@ -92,7 +92,7 @@ button:active {
 }
 
 button:hover:not(:disabled) {
- background: lightcoral;
+ background: #cfebfb ;
  color: white;
  text-shadow: 0 0.1rem #bcb4b4;
 }

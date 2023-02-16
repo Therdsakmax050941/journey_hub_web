@@ -145,6 +145,7 @@
                 </td>
                 <td>
                   <a href="edit.php?id=<?= $villa['id'] ?>" class="btn btn-primary">Edit</a>
+                  <a href="delete.php?id=<?= $villa['id'] ?>" class="btn btn-danger" onsubmit="return confirm('Are you sure you want to delete this villa?')">Delete</a>
                 </td>
               </tr>
             <?php endforeach; ?>
