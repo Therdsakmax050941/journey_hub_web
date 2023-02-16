@@ -17,7 +17,7 @@ $sql_check_top = "SELECT * FROM villa_data WHERE top = '$top' LIMIT 1";
 $result = $conn->query($sql_check_top);
 if ($result->num_rows > 0) {
     // Given top value already exists, show alert message and redirect to the form page
-    echo "<script>alert('มีแล้วใส่ซ้ำมาทำไม ห้วย!!!!'); window.location.href = 'form.php';</script>";
+    echo "<script>alert('มีแล้วใส่ซ้ำมาทำไม ห้วย!!!!'); window.location.href = 'admin.php';</script>";
     exit();
 }
 
@@ -35,7 +35,7 @@ if (!is_uploaded_file($_FILES["img"]["tmp_name"]) || !move_uploaded_file($_FILES
     echo "The file ". basename( $_FILES["img"]["name"]). " has been uploaded.";
 
     // Insert data into database
-    $sql = "INSERT INTO villa_data (name_villa, content, category, bedrooms, guests,  img, top, url)
+    $sql = "INSERT INTO villa_data (name_villa, content, category, bedrooms, guests,  img,top, url)
     VALUES ('$name_villa', '$content', '$category', '$bedrooms', '$guests', '$target_file', '$top' ,'$url')";
 
     if ($conn->query($sql) === TRUE) {

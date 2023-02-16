@@ -22,7 +22,7 @@
   <title>Journey บ้านพักพูลวิลล่า</title>
 </head>
 
-<header>
+<header class="font">
   <nav class="navbar navbar-expand-lg navbar-light header_bg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" style="margin-left: 500px;"><img src="/img/logo2.png" width="120px"
@@ -78,32 +78,44 @@
 </header>
 
 <body>
-  <?php include('villa_db.php') ?>
-  <div class="w3-container header_body" style="margin-top: 90px; text-align: center "></div>
-  <br><br>
-  <h3> Filtter</h3>
+  <br><br><br>
+ <img src="/img/head.png" width="100%" >
 
-  <div id="myBtnContainer">
-    <h3>หมวดหมู่ :</h3>
+  <?php include('villa_db.php') ?>
+  <div class="w3-container header_body filter_bg filter">       
+  <div id="myBtnContainer" class="font filter_bg" >
+    <br>
+    <label class= "btn" style ="font-size: 20px;">หมวดหมู่ :</label>
     <button class="btn filter-btn" onclick="filterSelection('popular')"> พูลวิลล่ายอดนิยม</button>
     <button class="btn filter-btn" onclick="filterSelection('cheap')"> พูลวิลล่าราคาถูก</button>
     <button class="btn filter-btn" onclick="filterSelection('all')"> พูลวิลล่าทั้งหมด</button>
     <button class="btn filter-btn" onclick="filterSelection('promo')"> โปรโมชั่น</button>
   </div>
+  <hr>
+  <br>
   <div id="myBtnContainer">
-    <h3>จำนวนห้องนอน :</h3>
+    <div class="font filter_bg">
+    <label class= "btn" style ="font-size: 20px;">จำนวนห้องนอน :</label>
     <button class="btn filter-btn"  onclick="filterSelection('bedrooms-two')"> 2 ห้องนอน</button>
     <button class="btn filter-btn"  onclick="filterSelection('bedrooms-three')"> 3 ห้องนอน</button>
     <button class="btn filter-btn"  onclick="filterSelection('bedrooms-four')"> 4 ห้องนอน</button>
     <button class="btn filter-btn"  onclick="filterSelection('bedrooms-five')"> 5 ห้องนอน</button>
     <button class="btn filter-btn"  onclick="filterSelection('bedrooms-six+')"> 6 ห้องนอนขึ้นไป</button>
+    </div>
   </div>
-  <div id="myBtnContainer">
-    <h3>จำนวนคน :</h3>
+  <hr>
+<br>
+  <div id="myBtnContainer" class="font filter_bg">
+    <label class= "btn" style ="font-size: 20px;">จำนวนคน :</label>
     <button class="btn filter-btn 6+" data-guests="guests-10" onclick="filterSelection('guests-ten')"> 10 ท่าน </button>
     <button class="btn filter-btn" data-guests="guests-15" onclick="filterSelection('guests-fifteen')"> 15 ท่าน</button>
     <button class="btn filter-btn" data-guests="guests-20" onclick="filterSelection('guests-twenty')"> 20 ท่าน</button>
   </div>
+  <hr>
+</div>
+<br>
+<br>
+<h1 style="text-align: center;" class="font">พูลวิลล่า เขาใหญ่</h1>
   <div class="w3-row-padding" style="margin-top: 90px;">
     <?php foreach ($villas as $villa): ?>
       <div
