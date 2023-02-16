@@ -30,6 +30,39 @@
           <label for="content">Content:</label>
           <textarea id="content" name="content" class="form-control"></textarea>
         </div>
+
+        <div class="form-group">
+            <label for="category">หมวดหมู่:</label>
+            <select id="category" name="category" class="form-control">
+              <option value="">--Select Category--</option>
+              <option value="popular">พูลวิลล่ายอดนิยม</option>
+              <option value="cheap">พูลวิลล่าราคาถูก</option>
+              <option value="all">พูลวิลล่าทั้งหมด</option>
+              <option value="promo">โปรโมชั่น</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="bedrooms">จำนวนห้องนอน:</label>
+            <select id="bedrooms" name="bedrooms" class="form-control">
+              <option value="">--Select Category--</option>
+              <option value="bedrooms-two">2 ห้องนอน</option>
+              <option value="bedrooms-three">3 ห้องนอน</option>
+              <option value="bedrooms-four">4 ห้องนอน</option>
+              <option value="bedrooms-five">5 ห้องนอน</option>
+              <option value="bedrooms-six+">6 ห้องนอนขึ้นไป</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">จำนวนคน:</label>
+            <select id="guests" name="guests" class="form-control">
+              <option value="">--Select Category--</option>
+              <option value="guests-ten"> 10 ท่าน </option>
+              <option value="guests-fifteen">15 ท่าน</option>
+              <option value="guests-twenty">20 ท่าน</option>
+            </select>
+          </div>
         <div class="form-group">
           <label for="top">อันดับที่จะโชว์:</label>
           <input type="number" id="top" name="top" class="form-control">
@@ -70,7 +103,9 @@
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name_villa = $_POST["name_villa"];
     $content = $_POST["content"];
-    $img = $villa["img"];
+    $category = $_POST["category"];
+    $bedrooms = $_POST["bedrooms"];
+    $guests = $_POST["guests"];
     $top = $_POST["top"];
     $url = $_POST["url"];
 
@@ -91,7 +126,7 @@
     }
 
     // Update villa data in database
-    $sql = "UPDATE villa_data SET name_villa = '$name_villa', content = '$content', img = '$img', top = '$top', url = '$url' WHERE id = $id";
+    $sql = "UPDATE villa_data SET name_villa = '$name_villa', content = '$content', category = '$category', bedrooms = '$bedrooms' , guests = '$guests', img = '$img', top = '$top', url = '$url' WHERE id = $id";
 
     if ($conn->query($sql) === TRUE) {
         // Insertion successful

@@ -4,6 +4,9 @@ include('server.php');
 // Get form data
 $name_villa = $_POST["name_villa"];
 $content = $_POST["content"];
+$category = $_POST["category"];
+$bedrooms = $_POST["bedrooms"];
+$guests = $_POST["guests"];
 $top = $_POST["top"];
 $url = $_POST["url"];
 
@@ -32,8 +35,8 @@ if (!is_uploaded_file($_FILES["img"]["tmp_name"]) || !move_uploaded_file($_FILES
     echo "The file ". basename( $_FILES["img"]["name"]). " has been uploaded.";
 
     // Insert data into database
-    $sql = "INSERT INTO villa_data (name_villa, content, img,top, url)
-    VALUES ('$name_villa', '$content', '$target_file', '$top' ,'$url')";
+    $sql = "INSERT INTO villa_data (name_villa, content, category, bedrooms, guests,  img, top, url)
+    VALUES ('$name_villa', '$content', '$category', '$bedrooms', '$guests', '$target_file', '$top' ,'$url')";
 
     if ($conn->query($sql) === TRUE) {
         // Insertion successful

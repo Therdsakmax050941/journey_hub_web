@@ -2,7 +2,7 @@
 include('server.php');
 
 // Retrieve all villa data sorted by time added
-$sql = "SELECT * FROM villa_data ORDER BY time_add DESC";
+$sql = "SELECT * FROM villa_data ORDER BY top DESC";
 $result = $conn->query($sql);
 $villas = [];
 
